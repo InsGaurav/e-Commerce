@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/cart.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div id="navbar1" class="navbar1">
+            <div class="nav-logo border">
+                <a href="index.html">
+                    <img src="Images/Amazon-logo.png" alt="Amazon" class="logo" />
+                </a>
+
+
+                <p class="nav-in">.in</p>
+            </div>
+            <div class="nav-add border">
+                <div class="nav-address">
+                    <p class="add-1">Hello</p>
+                    <div class="address-icon">
+                        <i class="fa-solid fa-location-dot" style="color: #f1f2f3"></i>
+                        <p class="add-2">Select your address</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-search">
+                <select name="Category" id="prod_Category" class="search-select dropdown title=" category" ">
+                    <option value=" All">All</option>
+                    <option value="Prime">Prime video</option>
+                    <option value="Device">Alexa</option>
+                    <option value="electric">Electronics</option>
+                    <option value="cloth">Clothes</option>
+                    <option value="health">Diet</option>
+                </select>
+
+                <input type="text" id="search_bar" class="nav-search-bar" placeholder="Search Amazon.in" />
+
+                <div class="nav-search-logo">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <div class="nav-language border">
+                <div class="country-logo">
+                    <img src="Images/Flag_of_India.png" alt="[]" height="14px" width="20px" />
+                </div>
+                <div>
+                    <select name="language" id="lang" class="select-lang dropdown">
+                        <option value="EN">EN -English</option>
+                        <option value="HI">HI -हिन्दी</option>
+                        <option value="TA">TA -தமிழ்</option>
+                        <option value="TE">TE -తెలుగు</option>
+                        <option value="KN">KN -ಕನ್ನಡ</option>
+                        <option value="ML">ML -മലയാളം</option>
+                        <option value="BN">BN -বাংলা</option>
+                    </select>
+                </div>
+            </div>
+            <div class="nav-account border">
+                <div>
+                    <p class="acc-line1">Hello, sign in</p>
+                    <p class="acc-line2">Account & Lists</p>
+                </div>
+            </div>
+            <div class="border nav-return">
+                <div>
+                    <a href="orders.html">
+                        <p class="return-line1">Returns</p>
+                        <p class="return-line2">& Orders</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-cart border">
+                <div class="cart-logo">
+                    <!--  -->
+                    <a href="cart.html"> <img src="images/cart-icon.png" alt="\_/" /></a>
+                </div>
+                <div class="cart-quantity">0</div>
+                <p class="cart-name">Cart</p>
+            </div>
+        </div>
+
+        <div id="navbar2" class="navbar2">
+            <div class="nav2-menu nav2-border">
+                <i class="fa-solid fa-bars"></i>
+                <p>All</p>
+            </div>
+            <div class="nav2-panel">
+                <a class="nav2-border" href="#">Amazon miniTV</a>
+                <a class="nav2-border" href="#">Sell</a>
+                <a class="nav2-border" href="#">Best Sellers</a>
+                <a class="nav2-border" href="#">Mobiles</a>
+                <a class="nav2-border" href="#">Today's Deals</a>
+                <a class="nav2-border" href="#">Customer Service</a>
+                <a class="nav2-border" href="#">New Releases</a>
+                <a class="nav2-border" href="#">Electronics</a>
+                <a class="nav2-border" href="#">Prime</a>
+                <a class="nav2-border" href="#">Home&Kitchen</a>
+                <a class="nav2-border" href="#">Amazon Pay</a>
+            </div>
+            <div class="app-link nav2-border">
+                <a href="#">Shopping Made easy | Download the app</a>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- this is the main content area of this code  -->
+
+
+    <div class="cart-work-area">
+        <div class="cart-item-sec">
+            <div class="page-name">
+                <h1>Shopping Cart</h1>
+
+                <a href="#"> Deselect all items </a>
+                <p>Price</p>
+
+            </div>
+            <hr style="display: block; width: 95%;height: 1px;color: grey; margin: auto;">
+            <div class="cart-items">
+                <input type="checkbox" name="item-select" id="item-select" checked>
+                <img src="Images/cart-Items/cart-item1.jpg" alt="@">
+                <div class="cart-item-description">
+                    <p>Zodo 8. 5 inch LCD E-Writer Electronic Writing Pad/Tablet Drawing Board (Paperless Memo Digital
+                        Tablet)</p>
+                    <div class="stock-disp ">In stock</div>
+                    <div class="shipping-info">Eligible for free shipping</div>
+                    <div class="gift-option">
+                        <input type="checkbox">
+                        This will be a gift
+                        <a href="#"> Learn more </a>
+                    </div>
+
+                    <div class="cart-item-btns">
+
+                        <div class="select-quantity    buttons-border">
+
+                            <span>Qty:</span>
+
+                            <select name="product-quantity" id="quantity">
+
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+
+
+
+                        <input type="button" class="buttons-border" value="Delete">
+                        <input type="button" class="buttons-border" value="Save for later">
+                        <input type="button" class="buttons-border" value="See more like this ">
+                        <input type="button" class="buttons-border" value="Share">
+
+                    </div>
+
+
+                </div>
+
+                <span class="item-price">&#8377 159.00</span>
+            </div>
+
+            <hr style="display: block; width: 95%;height: 1px;color: grey; margin: auto;">
+            <div class="cart-items">
+                <input type="checkbox" name="item-select" id="item-select" checked>
+                <img src="Images/cart-Items/cart-item2.jpg" alt="@">
+                <div class="cart-item-description">
+                    <p>Zodo 8. 5 inch LCD E-Writer Electronic Writing Pad/Tablet Drawing Board (Paperless Memo Digital
+                        Tablet)</p>
+                    <div class="stock-disp ">In stock</div>
+                    <div class="shipping-info">Eligible for free shipping</div>
+                    <div class="gift-option">
+                        <input type="checkbox">
+                        This will be a gift
+                        <a href="#"> Learn more </a>
+                    </div>
+
+                    <div class="cart-item-btns">
+
+                        <div class="select-quantity    buttons-border">
+
+                            <span>Qty:</span>
+
+                            <select name="product-quantity" id="quantity">
+
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+
+
+
+                        <input type="button" class="buttons-border" value="Delete">
+                        <input type="button" class="buttons-border" value="Save for later">
+                        <input type="button" class="buttons-border" value="See more like this ">
+                        <input type="button" class="buttons-border" value="Share">
+
+                    </div>
+
+
+                </div>
+
+                <span class="item-price">&#8377 159.00</span>
+            </div>
+
+            <hr style="display: block; width: 95%;height: 1px;color: grey; margin: auto;">
+            <div class="cart-items">
+                <input type="checkbox" name="item-select" id="item-select" checked>
+                <img src="Images/cart-Items/cart-item3.jpg" alt="@">
+                <div class="cart-item-description">
+                    <p>Zodo 8. 5 inch LCD E-Writer Electronic Writing Pad/Tablet Drawing Board (Paperless Memo Digital
+                        Tablet)</p>
+                    <div class="stock-disp ">In stock</div>
+                    <div class="shipping-info">Eligible for free shipping</div>
+                    <div class="gift-option">
+                        <input type="checkbox">
+                        This will be a gift
+                        <a href="#"> Learn more </a>
+                    </div>
+
+                    <div class="cart-item-btns">
+
+                        <div class="select-quantity    buttons-border">
+
+                            <span>Qty:</span>
+
+                            <select name="product-quantity" id="quantity">
+
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+
+
+
+                        <input type="button" class="buttons-border" value="Delete">
+                        <input type="button" class="buttons-border" value="Save for later">
+                        <input type="button" class="buttons-border" value="See more like this ">
+                        <input type="button" class="buttons-border" value="Share">
+
+                    </div>
+
+
+                </div>
+
+                <span class="item-price">&#8377 159.00</span>
+            </div>
+
+            <hr style="display: block; width: 95%;height: 1px;color: grey; margin: auto;">
+            <div class="cart-items">
+                <input type="checkbox" name="item-select" id="item-select" checked>
+                <img src="Images/cart-Items/cart-item4.jpg" alt="@">
+                <div class="cart-item-description">
+                    <p>Zodo 8. 5 inch LCD E-Writer Electronic Writing Pad/Tablet Drawing Board (Paperless Memo Digital
+                        Tablet)</p>
+                    <div class="stock-disp ">In stock</div>
+                    <div class="shipping-info">Eligible for free shipping</div>
+                    <div class="gift-option">
+                        <input type="checkbox">
+                        This will be a gift
+                        <a href="#"> Learn more </a>
+                    </div>
+
+                    <div class="cart-item-btns">
+
+                        <div class="select-quantity    buttons-border">
+
+                            <span>Qty:</span>
+
+                            <select name="product-quantity" id="quantity">
+
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+
+
+
+                        <input type="button" class="buttons-border" value="Delete">
+                        <input type="button" class="buttons-border" value="Save for later">
+                        <input type="button" class="buttons-border" value="See more like this ">
+                        <input type="button" class="buttons-border" value="Share">
+
+                    </div>
+
+
+                </div>
+
+                <span class="item-price">&#8377 159.00</span>
+            </div>
+
+            <hr style="display: block; width: 95%;height: 1px;color: grey; margin: auto;">
+            <div class="cart-items">
+                <input type="checkbox" name="item-select" id="item-select" checked>
+                <img src="Images/cart-Items/cart-item5.jpg" alt="@">
+                <div class="cart-item-description">
+                    <p>Zodo 8. 5 inch LCD E-Writer Electronic Writing Pad/Tablet Drawing Board (Paperless Memo Digital
+                        Tablet)</p>
+                    <div class="stock-disp ">In stock</div>
+                    <div class="shipping-info">Eligible for free shipping</div>
+                    <div class="gift-option">
+                        <input type="checkbox">
+                        This will be a gift
+                        <a href="#"> Learn more </a>
+                    </div>
+
+                    <div class="cart-item-btns">
+
+                        <div class="select-quantity    buttons-border">
+
+                            <span>Qty:</span>
+
+                            <select name="product-quantity" id="quantity">
+
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+
+
+
+                        <input type="button" class="buttons-border" value="Delete">
+                        <input type="button" class="buttons-border" value="Save for later">
+                        <input type="button" class="buttons-border" value="See more like this ">
+                        <input type="button" class="buttons-border" value="Share">
+
+                    </div>
+
+
+                </div>
+
+                <span class="item-price">&#8377 159.00</span>
+            </div>
+
+            <hr style="display: block; width: 95%;height: 1px;color: grey; margin: auto;">
+            <div class="cart-items">
+                <input type="checkbox" name="item-select" id="item-select" checked>
+                <img src="Images/cart-Items/cart-item6.jpg" alt="@">
+                <div class="cart-item-description">
+                    <p>Zodo 8. 5 inch LCD E-Writer Electronic Writing Pad/Tablet Drawing Board (Paperless Memo Digital
+                        Tablet)</p>
+                    <div class="stock-disp ">In stock</div>
+                    <div class="shipping-info">Eligible for free shipping</div>
+                    <div class="gift-option">
+                        <input type="checkbox">
+                        This will be a gift
+                        <a href="#"> Learn more </a>
+                    </div>
+
+                    <div class="cart-item-btns">
+
+                        <div class="select-quantity    buttons-border">
+
+                            <span>Qty:</span>
+
+                            <select name="product-quantity" id="quantity">
+
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+
+
+
+                        <input type="button" class="buttons-border" value="Delete">
+                        <input type="button" class="buttons-border" value="Save for later">
+                        <input type="button" class="buttons-border" value="See more like this ">
+                        <input type="button" class="buttons-border" value="Share">
+
+                    </div>
+
+
+                </div>
+
+                <span class="item-price">&#8377 159.00</span>
+            </div>
+
+            <hr style="display: block; width: 95%;height: 1px;color: grey; margin: auto;">
+            <div class="cart-items">
+                <input type="checkbox" name="item-select" id="item-select" checked>
+                <img src="Images/cart-Items/cart-item7.jpg" alt="@">
+                <div class="cart-item-description">
+                    <p>Zodo 8. 5 inch LCD E-Writer Electronic Writing Pad/Tablet Drawing Board (Paperless Memo Digital
+                        Tablet)</p>
+                    <div class="stock-disp ">In stock</div>
+                    <div class="shipping-info">Eligible for free shipping</div>
+                    <div class="gift-option">
+                        <input type="checkbox">
+                        This will be a gift
+                        <a href="#"> Learn more </a>
+                    </div>
+
+                    <div class="cart-item-btns">
+
+                        <div class="select-quantity    buttons-border">
+
+                            <span>Qty:</span>
+
+                            <select name="product-quantity" id="quantity">
+
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+
+
+
+                        <input type="button" class="buttons-border" value="Delete">
+                        <input type="button" class="buttons-border" value="Save for later">
+                        <input type="button" class="buttons-border" value="See more like this ">
+                        <input type="button" class="buttons-border" value="Share">
+
+                    </div>
+
+
+                </div>
+
+                <span class="item-price">&#8377 159.00</span>
+            </div>
+
+            <hr style="display: block; width: 95%;height: 1px;color: grey; margin: auto;">
+            <div class="cart-items">
+                <input type="checkbox" name="item-select" id="item-select" checked>
+                <img src="Images/cart-Items/cart-item8.jpg" alt="@">
+                <div class="cart-item-description">
+                    <p>Zodo 8. 5 inch LCD E-Writer Electronic Writing Pad/Tablet Drawing Board (Paperless Memo Digital
+                        Tablet)</p>
+                    <div class="stock-disp ">In stock</div>
+                    <div class="shipping-info">Eligible for free shipping</div>
+                    <div class="gift-option">
+                        <input type="checkbox">
+                        This will be a gift
+                        <a href="#"> Learn more </a>
+                    </div>
+
+                    <div class="cart-item-btns">
+
+                        <div class="select-quantity    buttons-border">
+
+                            <span>Qty:</span>
+
+                            <select name="product-quantity" id="quantity">
+
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+
+
+
+                        <input type="button" class="buttons-border" value="Delete">
+                        <input type="button" class="buttons-border" value="Save for later">
+                        <input type="button" class="buttons-border" value="See more like this ">
+                        <input type="button" class="buttons-border" value="Share">
+
+                    </div>
+
+
+
+                </div>
+
+                <span class="item-price">&#8377 159.00</span>
+            </div>
+
+
+
+        </div>
+        <div class="proceed-to-order">
+            <div class="qualify-msg">
+                <i class="fa-solid fa-circle-check" style="color: #17950e;"></i>
+                <p class="free-delivery-qualify">
+                    Part of your order qualifies for FREE Delivery.
+                    Select this option at checkout.
+                </p>
+            </div>
+            <span class="learn-more">Details</span>
+
+            <p id="cart-subtotal">Subtotal (9 items): &#8377 5,591.00</p>
+            <div class="gift-voucher">
+                <input type="checkbox" id="add-gift-voucher">
+                <label for="add-gift-voucher">This order contains a gift.</label>
+            </div>
+
+
+            <button id="pay-for-order" class="proceed-buy">Proceed to Buy</button>
+
+
+            <select name="Emi" id="EMI" class="EMI">
+                <option disabled selected> EMI available
+                </option>
+                <option disabled>Your order qualifies for EMI with valid credit cards (not available on purchase of
+                    Gold, Jewelry, Gift cards and Amazon pay balance top up). Learn more</option>
+            </select>
+
+        </div>
+
+
+
+
+        <!-- related Products items -->
+
+
+        <div class="cart-related-products">
+            <div class="related-items">
+                <h5>Products related to items in your cart</h5>
+                <p class="sponsor-check">Sponsored
+                    <i class="fa-solid fa-circle-info" style="color: #94c549;"></i>
+                </p>
+
+                <div class="similar-item">
+                    <img class="related-item-image" src="Images/related-items/related-item1.jpg" alt="IMage">
+
+                    <div class="related-image-description">
+                        <p class="related-item-name">Wow Life Science O...</p>
+                        <img class="rating-image" src="Images/ratings/rating-50.png" alt="image">
+                        <p class="rating-count">53,452</p>
+                        <p class="related-item-price">
+                            &#8377 753.00
+                        </p>
+                        <button class="buying-options">See all buying options</button>
+                    </div>
+                </div>
+
+                <div class="similar-item">
+                    <img class="related-item-image" src="Images/related-items/related-item2.jpg" alt="IMage">
+
+                    <div class="related-image-description">
+                        <p class="related-item-name">Wow Life Science O...</p>
+                        <img class="rating-image" src="Images/ratings/rating-45.png" alt="image">
+                        <p class="rating-count">53,452</p>
+                        <p class="related-item-price">
+                            &#8377 753.00
+                        </p>
+                        <button class="buying-options">See all buying options</button>
+                    </div>
+                </div>
+
+                <div class="similar-item">
+                    <img class="related-item-image" src="Images/related-items/related-item3.jpg" alt="IMage">
+
+                    <div class="related-image-description">
+                        <p class="related-item-name">Wow Life Science O...</p>
+                        <img class="rating-image" src="Images/ratings/rating-35.png" alt="image">
+                        <p class="rating-count">53,452</p>
+                        <p class="related-item-price">
+                            &#8377 753.00
+                        <p>
+                            <button class="buying-options">See all buying options</button>
+                    </div>
+                </div>
+
+                <div class="similar-item">
+                    <img class="related-item-image" src="Images/related-items/related-item4.jpg" alt="IMage">
+
+                    <div class="related-image-description">
+                        <p class="related-item-name"> Wow Life Science O... </p>
+                         <img class="rating-image" src="Images/ratings/rating-25.png" alt="image">
+                        <p class="rating-count">53,452</p>
+                        <p class="related-item-price">
+                            &#8377 753.00
+                        </p>
+                        <button class="buying-options">See all buying options</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="foot-panel1">Back to Top</div>
+
+        <div class="foot-panel2">
+            <ul>
+                <p>Get to Know Us</p>
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Press Releases</a>
+                <a href="#">Amazon Science</a>
+            </ul>
+
+            <ul>
+                <p>Contact with Us</p>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </ul>
+
+            <ul>
+                <p>Make Money with Us</p>
+                <a href="#">Sell on Amazon</a>
+                <a href="#">Sell under Amazon Accelerator</a>
+                <a href="#">Protect and Build Your Brand</a>
+                <a href="#">Amazon Global Selling</a>
+                <a href="#">Become an Affiliate</a>
+                <a href="#">Fulfilment by Amazon</a>
+                <a href="#">Advertise Your Products</a>
+                <a href="#">Amazon Pay on Merchants</a>
+            </ul>
+
+            <ul>
+                <p>Let Us Help You</p>
+                <a href="#">COVID-19 and Amazon</a>
+                <a href="#">Your Account</a>
+                <a href="#">Returns Centre</a>
+                <a href="#">100% Purchase Protection</a>
+                <a href="#">Amazon App Download</a>
+                <a href="#">Help</a>
+            </ul>
+        </div>
+
+        <div class="foot-panel3">
+            <img class="foot-logo" src="Images/Amazon-logo.png" alt="Amazon" />
+            <div>
+                <select name="language" id="lang" class="foot-sel-lang border">
+                    <option value="EN">English</option>
+                    <option value="HI">हिन्दी</option>
+                    <option value="TA">தமிழ்</option>
+                    <option value="TE">తెలుగు</option>
+                    <option value="KN">ಕನ್ನಡ</option>
+                    <option value="ML">മലയാളം</option>
+                    <option value="BN">বাংলা</option>
+                </select>
+            </div>
+        </div>
+        <div class="foot-panel-bottom">
+            <div class="foot-panel4">
+                <a href="#"> Conditions of Use & Sale</a>
+                <a href="#">Privacy Notice</a>
+                <a href="#">Interest-Based Ads</a>
+            </div>
+
+            <div class="copyright">
+                <p>© 1996-2023, Amazon.com, Inc. or its affiliates</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

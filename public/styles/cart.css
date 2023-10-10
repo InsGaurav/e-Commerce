@@ -1,0 +1,304 @@
+body{
+    display: grid ;
+    
+}
+
+/* this is actually the main content area of the page here 
+we make all the grid items to display over the .page-name */
+
+
+
+
+.cart-work-area{
+
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto ;
+    row-gap: 1rem;
+    column-gap: 1rem;
+    padding: 1rem;
+    background-color: #EAEDED;
+
+}
+
+
+/* this makes the left section of the grid  */
+
+
+.cart-item-sec{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 7;
+}
+
+
+
+/* this makes the heading of the left side section of the grid  */
+
+.page-name{
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /* border-bottom: 1px solid grey; */
+    background-color:white;
+}
+.page-name h1{
+    font-weight: 500;
+    padding-bottom: 0.3rem;
+    
+}
+
+.page-name a {  
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #5d5aa7;
+}
+
+.page-name a :hover{
+    color: rgb(236, 236, 64);
+}
+
+.page-name p{
+    text-align: end;
+    color: green;
+   
+}
+
+
+/* this shows the cart items and these are also in the left part of the grid  */
+.cart-items{
+    background-color: white;
+    display:flex;
+    padding-left: 1rem;
+    padding-top: 1.5rem;
+    height: 10rem;
+    padding-bottom: 1rem;
+
+       
+}
+.cart-items img {
+    height: 10rem;
+    width: 12rem;
+
+    
+}
+
+#item-select {
+    margin-left: 1rem;
+    
+}
+.cart-item-description{
+    padding-left: 1rem; 
+    width: 60%;
+    
+}
+
+.cart-item-description p{
+    font-size: 1.1rem;
+    font-weight: 530;
+
+}
+
+
+
+/* item price this is also the part of the page heading */
+
+.item-price{
+    padding-left: 2rem;
+    padding-right: 1rem;
+    width: 40%;
+    text-align: right;
+    font-size: 1.2rem;
+    font-weight: 700;
+    
+}
+.stock-disp{
+    font-size: 0.7rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.shipping-info{
+    font-size: 0.7rem;
+    padding-bottom: 0.5rem;
+}
+.gift-option{
+    display: inline;
+    font-size: 0.7rem;
+    
+    
+}
+.gift-option a {
+    text-decoration: none;
+    
+}
+
+#quantity{
+    border:none;
+    background-color: #ececec;
+}
+
+
+.cart-item-btns {
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: baseline;
+    padding-bottom: 0.5rem;
+}
+
+.buttons-border{
+    border: none;
+    color:#5d5aa7 ;
+    font-size: 0.7rem;
+    border-left: 1px solid #D5D9D9;
+    border-right: 1px solid #D5D9D9;
+    
+    background-color: #fcfcfc;
+    
+    margin-right: 1rem;
+    
+}
+.select-quantity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 2rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: black;
+    border: #D5D9D9;
+    background-color: #ececec;
+}
+
+
+
+
+/* here we come to the next part of the grid */
+
+
+.proceed-to-order{
+    padding-top: 1rem;
+    background-color: white;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding-left: 1rem;
+    width: 17rem;
+    padding-bottom: 2rem;
+    padding-right: 1rem;
+    
+}
+
+.qualify-msg{
+    display: flex;
+}
+
+
+.qualify-msg p{
+    padding-left: 0.5rem;
+}
+
+.free-delivery-qualify{
+    font-size: 0.7rem;
+}
+
+.learn-more{
+    font-size: 0.7rem;
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+    
+}
+
+.proceed-buy{
+
+    background-color:rgb(232, 232, 0);
+    width: 17rem;
+    height: 1.6rem;
+    border: 2px solid rgb(97, 205, 248);
+   border-radius: 8px;
+}
+
+
+#cart-subtotal{
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: 530;
+}
+
+.gift-voucher{
+    font-size: 0.85rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+.EMI{
+    width: 17rem;
+    height:2.5rem ;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+
+
+
+
+
+/* here we go with the next grid item which is at the right side of the screen  */
+
+.cart-related-products{
+    padding: 1rem;
+    border-radius: 8px;
+    
+    background-color: white;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 5;
+}
+.sponsor-check{
+    font-size: 0.7rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.similar-item{
+    display: flex;
+}
+.related-item-image{
+    height: 6rem;
+    width: 5rem;
+    margin-right: 1.5rem;
+}
+.related-item-name{
+    font-size: 0.8rem;
+}
+
+.rating-image{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: 5rem;
+    height: 1rem;
+}
+.rating-count{
+    font-size: 0.9rem;
+   
+    padding-bottom: 0.5rem;
+}
+
+.related-item-price{
+    font-size: 0.9rem;
+    
+    padding-bottom: 0.5rem;
+}
+
+.buying-options{
+    font-size: 0.7rem;
+    border-radius: 8px;
+    border: none;
+    height: 1.5rem;
+    background-color: #eeecec;
+    border-color: #D5D9D9;
+   margin-bottom: 1rem;
+}
+

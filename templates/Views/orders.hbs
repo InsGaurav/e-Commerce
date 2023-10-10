@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orders</title>
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/orders.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div id="navbar1" class="navbar1">
+            <div class="nav-logo border">
+                <a href="index.html">
+                    <img src="Amazon-logo.png" alt="Amazon" class="logo" />
+                </a>
+                
+
+                <p class="nav-in">.in</p>
+            </div>
+            <div class="nav-add border">
+                <div class="nav-address">
+                    <p class="add-1">Hello</p>
+                    <div class="address-icon">
+                        <i class="fa-solid fa-location-dot" style="color: #f1f2f3"></i>
+                        <p class="add-2">Select your address</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-search">
+                <select name="Category" id="prod_Category" class="search-select dropdown">
+                    <option value="All">All</option>
+                    <option value="Prime">Prime video</option>
+                    <option value="Device">Alexa</option>
+                    <option value="electric">Electronics</option>
+                    <option value="cloth">Clothes</option>
+                    <option value="health">Diet</option>
+                </select>
+
+                <input type="text" id="search_bar" class="nav-search-bar" placeholder="Search Amazon.in" />
+
+                <div class="nav-search-logo">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <div class="nav-language border">
+                <div class="country-logo">
+                    <img src="Flag_of_India.png" alt="[]" height="14px" width="20px" />
+                </div>
+                <div>
+                    <select name="language" id="lang" class="select-lang dropdown">
+                        <option value="EN">EN -English</option>
+                        <option value="HI">HI -हिन्दी</option>
+                        <option value="TA">TA -தமிழ்</option>
+                        <option value="TE">TE -తెలుగు</option>
+                        <option value="KN">KN -ಕನ್ನಡ</option>
+                        <option value="ML">ML -മലയാളം</option>
+                        <option value="BN">BN -বাংলা</option>
+                    </select>
+                </div>
+            </div>
+            <div class="nav-account border">
+                <div>
+                    <p class="acc-line1">Hello, sign in</p>
+                    <p class="acc-line2">Account & Lists</p>
+                </div>
+            </div>
+            <div class="border nav-return">
+                <div>
+                    <a href="orders.html">
+                        <p class="return-line1">Returns</p>
+                        <p class="return-line2">& Orders</p>
+                      </a>
+                </div>
+            </div>
+
+            <div class="nav-cart border">
+                <div class="cart-logo">
+                    <!--  -->
+                    <a href="cart.html"> <img src="images/cart-icon.png" alt="\_/" /></a>
+                </div>
+                <div class="cart-quantity">0</div>
+                <p class="cart-name">Cart</p>
+            </div>
+        </div>
+
+        <div id="navbar2" class="navbar2">
+            <div class="nav2-menu nav2-border">
+                <i class="fa-solid fa-bars"></i>
+                <p>All</p>
+            </div>
+            <div class="nav2-panel">
+                <a class="nav2-border" href="#">Amazon miniTV</a>
+                <a class="nav2-border" href="#">Sell</a>
+                <a class="nav2-border" href="#">Best Sellers</a>
+                <a class="nav2-border" href="#">Mobiles</a>
+                <a class="nav2-border" href="#">Today's Deals</a>
+                <a class="nav2-border" href="#">Customer Service</a>
+                <a class="nav2-border" href="#">New Releases</a>
+                <a class="nav2-border" href="#">Electronics</a>
+                <a class="nav2-border" href="#">Prime</a>
+                <a class="nav2-border" href="#">Home&Kitchen</a>
+                <a class="nav2-border" href="#">Amazon Pay</a>
+            </div>
+            <div class="app-link nav2-border">
+                <a href="#">Shopping Made easy | Download the app</a>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+
+    <div class="orders-work-area">
+        <div>
+            <a href="#">Your Account</a> >
+            Your orders
+        </div>
+        <div class="search-filter">
+            <p>Your Orders</p>
+           
+            <div class="order-search">
+                <div class="order-search-bar">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #000714;"></i>
+                    <input type="text" placeholder=" Search all orders">
+                </div>
+                <button>Search orders</button>
+    
+            </div>
+           
+        </div>
+        <div class="order-options-pages">
+            <a href="#">Orders</a>
+            <a href="#">Buy Again</a>
+            <a href="#">Not Yet Shipped</a>
+            <a href="#">Cancelled Orders</a>
+           
+        </div>
+        <hr style="display: block; width: 100%;height: 1px;color: grey; margin: auto;">
+        <div class="order-place-count">
+            <span class="order-count">1 order</span>
+            <span>placed in </span>
+            <select name="time-filter" id="time-filter" class="days-filter">
+                <option value="">last 30 days</option>
+                <option value="">last 3 months</option>
+                <option value="">2022</option>
+                <option value="">2021</option>
+                <option value="">2020</option>
+                <option value="">2019</option>
+            </select>
+        </div>
+
+        <div class="past-order-box">
+            <div class="order-details">
+                <div class="order-details-options" >
+                   <div>
+                        <span>ORDER PLACED</span>
+                        <span>TOTAL</span>
+                        <span>SHIP TO</span>
+                   </div> 
+                   <p>
+                    ORDER # 403-6599739-6861921
+                   </p>
+                </div>
+                <div class="order-details-options order-name">
+                    <div>
+                        <span>8 April,2021</span>
+                        <span>&#8377 499.00</span>
+                        <span>Gaurav</span>
+                    </div>
+                   
+                    <div class="invoice-anchor">
+                        <a href="#">View order details</a>
+                        <a href="#">Invoice</a>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="order-container">
+                <img class="order-image" src="images/past-order1.jpg" alt="@">
+
+                <div>
+                    <a  class="order-description" href="#">
+                        Boult Audio Bass Buds Q2 Over-Ear Wired Lightweight Stereo Headphones, Deep Bass & in-Built Mic, Headset with Comfortable Ear Cushions, Long Cord (Black)
+                    </a>
+                    <p>Return window closed on 17-Apr-2021</p>
+                    <div class="buy-view-buttons">
+                        <button class="buy-again-btn">
+                            <i class="fa-solid fa-anchor-lock"></i> Buy it again
+                        </button>
+                        <button class="order-item-view"> View your item</button>
+                    </div>
+                   
+                </div>
+                <button class="order-review-button">
+                    Write a product review
+                </button>
+            </div>
+            <div class="archive-order">
+                <a href="#">Archive order</a>
+            </div>
+           
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+    <footer>
+        <div class="foot-panel1">Back to Top</div>
+
+        <div class="foot-panel2">
+            <ul>
+                <p>Get to Know Us</p>
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Press Releases</a>
+                <a href="#">Amazon Science</a>
+            </ul>
+
+            <ul>
+                <p>Contact with Us</p>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </ul>
+
+            <ul>
+                <p>Make Money with Us</p>
+                <a href="#">Sell on Amazon</a>
+                <a href="#">Sell under Amazon Accelerator</a>
+                <a href="#">Protect and Build Your Brand</a>
+                <a href="#">Amazon Global Selling</a>
+                <a href="#">Become an Affiliate</a>
+                <a href="#">Fulfilment by Amazon</a>
+                <a href="#">Advertise Your Products</a>
+                <a href="#">Amazon Pay on Merchants</a>
+            </ul>
+
+            <ul>
+                <p>Let Us Help You</p>
+                <a href="#">COVID-19 and Amazon</a>
+                <a href="#">Your Account</a>
+                <a href="#">Returns Centre</a>
+                <a href="#">100% Purchase Protection</a>
+                <a href="#">Amazon App Download</a>
+                <a href="#">Help</a>
+            </ul>
+        </div>
+
+        <div class="foot-panel3">
+            <img class="foot-logo" src="Amazon-logo.png" alt="Amazon" />
+            <div>
+                <select name="language" id="lang" class="foot-sel-lang border">
+                    <option value="EN">English</option>
+                    <option value="HI">हिन्दी</option>
+                    <option value="TA">தமிழ்</option>
+                    <option value="TE">తెలుగు</option>
+                    <option value="KN">ಕನ್ನಡ</option>
+                    <option value="ML">മലയാളം</option>
+                    <option value="BN">বাংলা</option>
+                </select>
+            </div>
+        </div>
+        <div class="foot-panel-bottom">
+            <div class="foot-panel4">
+                <a href="#"> Conditions of Use & Sale</a>
+                <a href="#">Privacy Notice</a>
+                <a href="#">Interest-Based Ads</a>
+            </div>
+
+            <div class="copyright">
+                <p>© 1996-2023, Amazon.com, Inc. or its affiliates</p>
+            </div>
+        </div>
+    </footer>

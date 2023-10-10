@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Item View </title>
+
+  <link rel="stylesheet" href="styles/header.css" />
+  <link rel="stylesheet" href="styles/product-view-page.css" />
+  <link rel="stylesheet" href="styles/footer.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <header>
+    <div id="navbar1" class="navbar1">
+      <div class="nav-logo border">
+        <a href="index.html">
+          <img src="Amazon-logo.png" alt="Amazon" class="logo" />
+        </a>
+
+
+        <p class="nav-in">.in</p>
+      </div>
+      <div class="nav-add border">
+        <div class="nav-address">
+          <p class="add-1">Hello</p>
+          <div class="address-icon">
+            <i class="fa-solid fa-location-dot" style="color: #f1f2f3"></i>
+            <p class="add-2">Select your address</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-search">
+        <select name="Category" id="prod_Category" class="search-select dropdown">
+          <option value="All">All</option>
+          <option value="Prime">Prime video</option>
+          <option value="Device">Alexa</option>
+          <option value="electric">Electronics</option>
+          <option value="cloth">Clothes</option>
+          <option value="health">Diet</option>
+        </select>
+
+        <input type="text" id="search_bar" class="nav-search-bar" placeholder="Search Amazon.in" />
+
+        <div class="nav-search-logo">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+
+      <div class="nav-language border">
+        <div class="country-logo">
+          <img src="Flag_of_India.png" alt="[]" height="14px" width="20px" />
+        </div>
+        <div>
+          <select name="language" id="lang" class="select-lang dropdown">
+            <option value="EN">EN -English</option>
+            <option value="HI">HI -हिन्दी</option>
+            <option value="TA">TA -தமிழ்</option>
+            <option value="TE">TE -తెలుగు</option>
+            <option value="KN">KN -ಕನ್ನಡ</option>
+            <option value="ML">ML -മലയാളം</option>
+            <option value="BN">BN -বাংলা</option>
+          </select>
+        </div>
+      </div>
+      <div class="nav-account border">
+        <div>
+          <p class="acc-line1">Hello, sign in</p>
+          <p class="acc-line2">Account & Lists</p>
+        </div>
+      </div>
+      <div class="border nav-return">
+        <div>
+          <a href="orders.html">
+            <p class="return-line1">Returns</p>
+            <p class="return-line2">& Orders</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="nav-cart border">
+        <div class="cart-logo">
+          <!--  -->
+          <a href="cart.html"> <img src="images/cart-icon.png" alt="\_/" /></a>
+
+        </div>
+        <div class="cart-quantity">0</div>
+        <p class="cart-name">Cart</p>
+      </div>
+    </div>
+
+    <div id="navbar2" class="navbar2">
+      <div class="nav2-menu nav2-border">
+        <i class="fa-solid fa-bars"></i>
+        <p>All</p>
+      </div>
+      <div class="nav2-panel">
+        <a class="nav2-border" href="#">Amazon miniTV</a>
+        <a class="nav2-border" href="#">Sell</a>
+        <a class="nav2-border" href="#">Best Sellers</a>
+        <a class="nav2-border" href="#">Mobiles</a>
+        <a class="nav2-border" href="#">Today's Deals</a>
+        <a class="nav2-border" href="#">Customer Service</a>
+        <a class="nav2-border" href="#">New Releases</a>
+        <a class="nav2-border" href="#">Electronics</a>
+        <a class="nav2-border" href="#">Prime</a>
+        <a class="nav2-border" href="#">Home&Kitchen</a>
+        <a class="nav2-border" href="#">Amazon Pay</a>
+      </div>
+      <div class="app-link nav2-border">
+        <a href="#">Shopping Made easy | Download the app</a>
+      </div>
+    </div>
+  </header>
+
+
+
+
+
+
+
+
+
+
+  <main>
+    <div class="product-page-grid">
+      <div class="home-container">
+        <div class="home-container1">
+          <img alt="image" src="c3.jpg" class="home-image" />
+          <img alt="image" src="camera.jpg" class="home-image1" />
+          <img alt="image" src="c1.jpg" class="home-image2" />
+          <img alt="image" src="c2.jpg" class="home-image3" />
+        </div>
+        <div class="home-container3">
+          <img alt="image" src="camera.jpg" class="home-image4" />
+        </div>
+      </div>
+
+
+      <div class="product-content-desc">
+        <p class="product-name">
+          Canon EOS 850D 24.1 Digital SLR Camera (Black) with EF S18-55 IS STM Lens
+        </p>
+        <a class="brand-name" href="#">
+          Brand: Canon
+        </a>
+        <div class="rating-questions-bar">
+          <span>3.5 </span>
+          <img src="images/ratings/rating-35.png" alt="image">
+          <span id="down-angle-arrow"><i class="fa-solid fa-angle-down"></i></span>
+          <span><a href="#"> 21 ratings |</a></span>
+
+          <a href="#question-answer"><span>
+              22
+            </span> answered questions</a>
+        </div>
+        <hr style="width: 100%; height: 1px; margin: auto;">
+
+        <div>
+          <p class="product-price">
+            <span id="product-discount">
+              -27%
+            </span>
+            <span id="rupee-symbol">&#8377</span>
+            <span> 64990</span>
+          </p>
+          <p id="product-actual-price"> M.R.P
+            <span> ₹88995</span>
+          </p>
+
+
+          <p id="inclusive-tax">Inclusive of all taxes</p>
+          <span class="emi-info-line"> <b>EMI </b> starts at ₹3,105. No Cost EMI available</span>
+          <span class="emi-info-line"><a href="#">EMI options</a></span>
+        </div>
+
+        <div class="saving-bank-offers">
+          <p class="offers-count-block">
+            <img class="cover-percent-logo " src="images/percentage.png" alt="%">
+            <span id="save-extra"><span class="product-offers-color">Save Extra</span> with 5 offers</span>
+          </p>
+
+          <p>
+            <span class="product-offers-color">No Cost EMI:</span>
+            <span>Avail No Cost EMI on select cards for orders above ₹3000</span> |
+            <a href="#">Details</a>
+
+          </p>
+
+          <p>
+            <span class="product-offers-color">
+              Bank Offer (5):
+            </span>
+            <span>
+              10% Instant Discount up to Rs.1250 with HDFC Bank Credit Cards (Non-EMI) on Minimum Purchase of Rs.5000
+            </span> |
+            <span>
+              <a href="#">See All</a>
+          </p>
+
+
+          <p>
+            <span class="product-offers-color">Cashback:</span>
+            <span>3 months Prime membership + Rs 1,800 welcome rewards on Amazon Pay ICICI Bank cr</span> |
+
+            <a href="#">
+              Details
+            </a>
+
+          </p>
+
+          <p>
+            <span>
+              <span class="product-offers-color">Partners offers</span>
+              Get GST invoice and save up to 28% on business purchases. Sign up for free
+            </span> |
+            <a href="#">Details</a>
+          </p>
+
+          <p>
+            <i class="fa-solid fa-angle-up"></i>
+            <a href="#">See less</a>
+          </p>
+
+        </div>
+
+        <div class="a-carousal">
+          <span>
+            <img src="images/delivery.png" alt="load-image">
+            <span>Free delivery</span>
+          </span>
+          <span>
+            <img src="images/replacemement.png" alt="load-image">
+            <span>10 Day replacement</span>
+          </span>
+          <span>
+            <img src="images/warranty.png" alt="load-image">
+            <span>2 years warranty</span>
+          </span>
+          <span>
+            <img src="images/delivered.png" alt="load-image">
+            <span>Amazon Delivered</span>
+          </span>
+          <span>
+            <img src="images/secure-transaction.png" alt="load-image">
+            <span>Secure Transaction</span>
+          </span>
+        </div>
+
+
+
+
+
+        <div class="about-item-details">
+
+          <table>
+            <tr>
+              <td class="features-bold">Brand</td>
+              <td>Canon</td>
+            </tr>
+            <tr>
+              <td class="features-bold">Model Name</td>
+              <td>DSLR</td>
+            </tr>
+            <tr>
+              <td class="features-bold">Photo Sensor Size</td>
+              <td>APS-C</td>
+            </tr>
+            <tr>
+              <td class="features-bold">Maximum Shutter Speed</td>
+              <td>1/4000 Seconds</td>
+            </tr>
+            <tr>
+              <td class="features-bold">Minimum Shutter Speed</td>
+              <td>1/4000 Seconds</td>
+            </tr>
+            <tr>
+              <td class="features-bold">Form Factor</td>
+              <td>DSLR</td>
+            </tr>
+            <tr>
+              <td class="features-bold">Effective Still Resolution</td>
+              <td>24.1 MP</td>
+            </tr>
+            <tr>
+              <td class="features-bold">Special Feature</td>
+              <td>Live View</td>
+            </tr>
+            <tr>
+              <td class="features-bold">Colour</td>
+              <td>Black</td>
+            </tr>
+            <tr>
+              <td class="features-bold">Connectivity Technology</td>
+              <td>Wi-Fi</td>
+            </tr>
+          </table>
+        </div>
+
+
+        <div class="more-details">
+          <p>About this item</p>
+          <ul>
+            <li>All cross-type 45 point AF (viewfinder) and Dual pixel CMOS AF (Live View)</li>
+            <li>Wi-Fi connectivity + user-friendly ergonomics and interface</li>
+            <li>24.1-megapixel APS-C CMOS sensor + 4K video recording</li>
+            <li>Optical Zoom: 3x</li>
+          </ul>
+        </div>
+
+      </div>
+
+
+      <div class="Extra-imp-info">
+       
+        <div class="grid-box-price">
+          <span> ₹</span>64,990<sup>00</sup>
+        </div>
+        <br>
+        <div id="free-del-text">
+          <a href="#">FREE delivery</a> 
+          <span id="prod-del-date"> Monday, 10 July. </span>
+          Details
+        </div>
+      
+
+        <div class="location-symbol">
+          <i class="fa-solid fa-location-dot"></i>
+        Deliver to Gaurav - New Delhi 110017‌
+        </div>
+        
+        <p class="stock-status">Only 1 left in stock</p>
+      
+        <p class="prod-company-detail">
+          <span>
+            Sold by 
+          </span>
+           
+          <a href="#">Appario Retail Private Ltd </a> and 
+          <a href="#">Fulfilled by Amazon</a>.
+          
+        </p>
+        
+        <div class="product-protection-plan">
+          <p id="pp">
+            Add a protection plan:
+          </p>        
+
+        <label for="warranty1" class="warranty-checkbox">
+          <input type="radio" id="warranty1"  name="warranty" value="1 Year Extended Warranty">
+          <i class="fa-solid fa-square-check radio-checkmark"></i>
+          <a href="#">1 Year Extended Warranty</a>
+          for
+          <span>₹2,699.00</span>
+        </label>
+        <br>
+
+        
+        <label for="warranty2" class="warranty-checkbox">
+          <input type="radio" id="warranty2" name="warranty" value="2 Year Extended Warranty">
+          <i class="fa-solid fa-square-check radio-checkmark"></i>
+          <a href="#">2 Year Extended Warranty </a>
+           <span>for</span>
+          <span> ₹6,499.00</span>         
+        </label>
+        <br>
+
+
+        <label for="warranty3" class="warranty-checkbox">
+          <input type="radio" id="warranty3" name="warranty" value="3 Years Complete Appliance Protection Plan">
+          <i class="fa-solid fa-square-check radio-checkmark"></i>
+          <a href="#">
+            3 Years
+            Complete Appliance Protection Plan</a> for
+            <span> ₹14,399.00</span>
+        </label>
+        <br>
+      </div>
+        <br>
+
+
+        <button class="add-to-cart-button">Add to Cart</button>
+        <br>
+
+        <button class="buy-button">Buy Now</button>
+        <br>
+        <span class="lock-symbol">
+          <i class="fa-solid fa-lock" style="color: #b1bccd;"></i>
+        </span>
+        <span id="Secure-text">
+          Secure transaction
+        </span>
+        <br>
+        <div class="gift-checkbox">
+          <input type="checkbox" id="gift" name="gift" value="Add Gift">
+          <label for="gift" >
+           Add gift options
+          </label>
+        </div>
+        
+      
+
+        <div>
+          <button class="add-wishlist-button">Add to Wish List</button>
+        <i><i class="fa-solid fa-angle-down"></i></i>
+        </div>
+        
+       
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+    <div class="about-item-details2">
+      <p>Product Details</p>
+      <ul>
+        <li><span> Batteries:</span> 1 Lithium Ion batteries required. (included)</li>
+        <li><span>Product Dimensions:</span> 10.3 x 13.1 x 7.4 cm; 950 Grams</li>
+        <li><span>Date First Available:</span> 25 February 2020</li>
+        <li><span>Manufacturer:</span> Canon</li>
+        <li><span>ASIN:</span> B0853XGGSW</li>
+        <li><span>Item model number:</span> 3925C008AA</li>
+        <li><span>Country of Origin:</span> Japan</li>
+        <li><span>Item Weight:</span> 950 g</li>
+        <li><span>Item Dimensions LxWxH:</span> 10.3 x 13.1 x 7.4 Centimeters</li>
+        <li><span>Included Components:</span> Canon 850D Camera, 18-55mm Lens, Camera Battery, Battery charger, Camera
+          Tag, User
+          Manual, 16GB Memory card, Carry Case.</li>
+        <li><span>Best Sellers Rank:</span> #178,575 in Electronics (See Top 100 in Electronics)</li>
+        <li><span>Customer Reviews:</span> 3.5 out of 5 stars <img src="images/ratings/rating-35.png"
+            alt="Customer Review"> 21
+          ratings</li>
+
+      </ul>
+    </div>
+
+    <div class="in-box">
+      <h2>What is in the box?</h2>
+
+      Canon 850D Camera,
+      18-55mm Lens,
+      Camera Battery,
+      Battery Charger,
+      Camera Tag,
+      User Manual,
+      16GB Memory Card,
+      Carry Case
+
+    </div>
+
+    <div id="question-answer">
+      <h2>Customer Questions & Answers</h2>
+      <div class="question-answer">
+        <button class="vote-button">
+          <span class="upvote-symbol">▲</span><br>
+          <span class="upvote-count">0</span><br>
+          Vote
+        </button>
+        <div>
+
+          <strong>Question: </strong>
+          <span class="ques-type">
+            Can I record time lapse video?
+          </span>
+          <br>
+          <br>
+          <strong>Answer: </strong>
+          <span class="ans-type">
+            Yes please
+          </span>
+          <br>
+          <em>By sudhakar on 29 October, 2021</em>
+        </div>
+      </div>
+      <div class="question-answer">
+        <button class="vote-button">
+          <span class="upvote-symbol">▲</span><br>
+          <span class="upvote-count">0</span><br>
+          Vote
+        </button>
+        <div>
+          <strong>Question: </strong>
+          <span class="ques-type">
+            Canon 850d camera have digic 7 sensor or digic 8 sensor ?
+          </span>
+          <br>
+          <br>
+          <strong>Answer: </strong>
+          <span class="ans-type">digic 8 </span>
+          <br>
+          <em>By sudhakar on 27 September, 2021</em>
+        </div>
+      </div>
+      <div class="question-answer">
+        <button class="vote-button">
+          <span class="upvote-symbol">▲</span><br>
+          <span class="upvote-count">0</span><br>
+          Vote
+        </button>
+        <div>
+          <strong>Question: </strong>
+          <span class="ques-type">
+            this cam dual focus system?
+          </span>
+          <br>
+          <br>
+          <strong>Answer: </strong>
+          <span class="ans-type">Yes</span>
+          <br>
+          <em>By Arun on 20 June, 2023</em>
+        </div>
+      </div>
+      <div class="question-answer">
+        <button class="vote-button">
+          <span class="upvote-symbol">▲</span><br>
+          <span class="upvote-count">0</span><br>
+          Vote
+        </button>
+        <div>
+          <strong>Question: </strong>
+          <span class="ques-type">
+            Lens 18 135 required?
+          </span>
+          <br>
+          <br>
+          <strong>Answer: </strong>
+          <span class="ans-type">yes </span>
+          <br>
+          <em>By sudhakar on 27 September, 2021</em>
+        </div>
+      </div>
+      <button class="more-questions-button">
+        See more questions
+      </button>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <footer>
+    <div class="foot-panel1">Back to Top</div>
+
+    <div class="foot-panel2">
+      <ul>
+        <p>Get to Know Us</p>
+        <a href="#">About Us</a>
+        <a href="#">Careers</a>
+        <a href="#">Press Releases</a>
+        <a href="#">Amazon Science</a>
+      </ul>
+
+      <ul>
+        <p>Contact with Us</p>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+      </ul>
+
+      <ul>
+        <p>Make Money with Us</p>
+        <a href="#">Sell on Amazon</a>
+        <a href="#">Sell under Amazon Accelerator</a>
+        <a href="#">Protect and Build Your Brand</a>
+        <a href="#">Amazon Global Selling</a>
+        <a href="#">Become an Affiliate</a>
+        <a href="#">Fulfilment by Amazon</a>
+        <a href="#">Advertise Your Products</a>
+        <a href="#">Amazon Pay on Merchants</a>
+      </ul>
+
+      <ul>
+        <p>Let Us Help You</p>
+        <a href="#">COVID-19 and Amazon</a>
+        <a href="#">Your Account</a>
+        <a href="#">Returns Centre</a>
+        <a href="#">100% Purchase Protection</a>
+        <a href="#">Amazon App Download</a>
+        <a href="#">Help</a>
+      </ul>
+    </div>
+
+    <div class="foot-panel3">
+      <img class="foot-logo" src="Amazon-logo.png" alt="Amazon" />
+      <div>
+        <select name="language" id="lang" class="foot-sel-lang border">
+          <option value="EN">English</option>
+          <option value="HI">हिन्दी</option>
+          <option value="TA">தமிழ்</option>
+          <option value="TE">తెలుగు</option>
+          <option value="KN">ಕನ್ನಡ</option>
+          <option value="ML">മലയാളം</option>
+          <option value="BN">বাংলা</option>
+        </select>
+      </div>
+    </div>
+    <div class="foot-panel-bottom">
+      <div class="foot-panel4">
+        <a href="#"> Conditions of Use & Sale</a>
+        <a href="#">Privacy Notice</a>
+        <a href="#">Interest-Based Ads</a>
+      </div>
+
+      <div class="copyright">
+        <p>© 1996-2023, Amazon.com, Inc. or its affiliates</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

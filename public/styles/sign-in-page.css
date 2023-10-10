@@ -1,0 +1,318 @@
+.content-portion{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+
+.login-details{
+    border: 1px #ddd solid;
+    background-color: #fff ;
+    border-radius: 8px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    width: 21rem;
+   display: flex;
+   flex-direction: column;
+}
+.login-details h1{
+    margin-top: 0.1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.login-details label{
+    font-size: 0.8rem;
+    font-weight: 550;
+    opacity: 0.8;
+    margin-bottom: 0.3rem;
+}
+
+.login-details input{
+    height: 2rem;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding-left: 0.5rem;
+    margin-bottom: 1rem;
+    
+}
+
+#sign-in-continue-btn{
+    background:#ffd814;
+    border-color: #ffd814; ;
+    height: 2rem;
+    width: 100%;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 1rem;
+}
+
+.amazon-logo{    
+    
+    height: 2.5rem;
+    width: 7rem;   
+}
+
+.logo{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+
+}
+.logo span {
+    position: relative;
+    bottom: 0.2rem;
+}
+
+
+.terms-cond{
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+    
+    
+}
+
+.terms-cond a{
+    color: #0066c0;
+    text-decoration: none;
+}   
+
+.need-help{
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-weight: 100;
+}
+.need-help a{
+    color: #0066c0;
+    text-decoration: none;
+}
+
+#sign-in-create-account-btn{
+    background: #ffffff;
+    border: 1px solid #dfdfdf;
+    height: 2rem;
+    width: 24rem ;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 1rem;
+}
+
+.new-user{
+    font-size: 0.8rem;
+    color: #767676;
+    width: 7rem;
+    margin-bottom: 1rem;
+    font-weight: 100;
+    z-index: 1;
+    position: relative;
+    top:2rem;
+    background-color: white;
+    text-align: center;
+}
+
+.line-break{
+    width: 24rem;
+    z-index: -1;
+}
+
+
+
+.sign-in-footer{
+    font-size: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 50rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    padding-bottom: 0.5rem;
+    border-top: 1px solid #ddd;
+}
+
+
+.sign-in-footer-items{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 0.75rem;
+    width: 24rem;
+    margin-bottom: 1.5rem
+
+}
+.sign-in-footer-items a{
+    color: #0066c0;
+    text-decoration: none;
+}
+
+
+
+
+
+/* here are the style for password page  */
+/* here are the style for the password page  */
+
+
+.password-label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.password-label a{
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #0066c0;
+}
+
+#sign-in-btn{
+    background:#ffd814;
+    border-color: #ffd814; ;
+    height: 2rem;
+    width: 100%;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 1rem;
+
+}
+
+.keep-sign-in{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start ;
+}
+.keep-sign-in a {
+    text-decoration: none;
+    color: #0066c0;
+    font-size: 0.8rem;
+   
+    
+}
+.keep-sign-in label{
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    padding-right: 0.5rem;
+    font-weight: 500;
+}
+
+#keep-in-details{
+    position: relative;
+    bottom:0.35rem;
+}
+
+.choice{
+    font-size: 0.8rem;
+    color: #767676;
+    width: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 100;
+    z-index: 1;
+    position: relative;
+    top:2rem;
+    background-color: white;
+    text-align: center;
+}
+
+#get-otp{
+    background: #ffffff;
+    border: 1px solid #dfdfdf;
+    height: 2rem;
+    width: 24rem ;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 1rem;
+}
+
+
+.charge-disclamer{
+  
+    font-size: 0.8rem;
+    text-align: left;
+    display: flex;
+    margin-top: 1rem;
+    position: relative;
+    right: 5.4rem;
+    color: #767676;
+  
+}
+.charge-disclamer i{
+    font-size: 0.7rem;
+    text-align: left;
+    padding-right: 0.3rem;
+    color: #0066c0;
+   
+}
+
+
+
+
+
+
+
+
+/* here is the code for the authentication page  */
+/* here is the code for the authentication page  */
+/* here is the code for the authentication page  */
+#authenticate-continue{
+    background:#ffd814;
+    border-color: #ffd814; ;
+    height: 2rem;
+    width: 100%;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 1rem;
+
+}
+
+.otp-info{
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+
+.resent{
+    font-size: 0.8rem;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.resent a{
+    text-decoration: none;
+    color: #0066c0;
+    
+}
+
+
+#sign-in-with-pass{
+    background: #ffffff;
+    border: 1px solid #dfdfdf;
+    height: 2rem;
+    width: 24rem ;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 1rem;
+
+}
+
