@@ -12,11 +12,17 @@ router.post('/signin', async (req, res) => {
     // Check if the input is an email or phone number
     const user = await User.findOne({
       $or: [{ email: emailOrPhone }, { phoneNumber: emailOrPhone }],
+
     });
 
     if (!user) {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
+
+    else if (user.otp === null) {
+      return res.status(401).json({ error: 'Invalid credentials' });
+    }
+    
 
     // Verify the password
     const passwordMatch = await bcrypt.compare(password, user.password);
