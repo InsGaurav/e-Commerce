@@ -2,6 +2,7 @@ const express = require('express');
 const hbs = require("hbs");
 const app = express();
 require("./db/conn");
+const customers = require("./model/schema");
 const PORT = process.env.PORT || 3000;
 const path = require("path");
 app.set("view engine", "hbs");
@@ -35,7 +36,25 @@ app.get("/results", (req, res) => {
 
 app.get("/sign-in" ,(req ,res)=>{
     res.render("sign-in");
-} )
+} ) ;
+
+app.post("/sign-up" , async (req , res)=>{
+    try {
+        const userData = req.body; // Assuming the form data is sent as JSON
+        
+        //to hash the password before save 
+
+        // Create a new user instance from the submitted data
+        const newCustomer = new User(userData);
+    
+        // Save the new user to the database
+        await newCustomer.save();
+    
+        res.json({ message: 'User signed up successfully.' });
+      } catch (error) {
+        res.status(500).json({ error: 'An error occurred during sign-up.' });
+      }
+})
 
 
 
