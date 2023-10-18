@@ -3,77 +3,81 @@ const router = express.Router();
 const User = require('../models/schema');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const otpGenerator = require("otp-generator");
+const twilio = require('twilio');
 
-// POST /signin route for user sign-in
+// POST /signin route for user sign-in (Step 1)
 router.post('/signin', async (req, res) => {
-  const { emailOrPhone, password } = req.body;
+  
+  const { emailOrPhone } = req.body;
 
   try {
     // Check if the input is an email or phone number
     const user = await User.findOne({
       $or: [{ email: emailOrPhone }, { phoneNumber: emailOrPhone }],
-
     });
 
     if (!user) {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
 
-    else if (user.otp === null) {
+    // Render the "sign-in-password.html" page for the next step
+    res.render("sign-in-password.html");
+  } catch (error) {
+    res.status(500).json({ error: 'An error occurred during sign-in.' });
+  }
+});
+
+// POST /sign-in-password route for entering the password (Step 2)
+router.post('/sign-in-password', async (req, res) => {
+  const { password } = req.body;
+
+  try {
+    // Verify the password against the user's record
+    const user = await User.findOne({ /* Find the user by email/phone */ });
+
+    if (!user) {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
-    
 
-    // Verify the password
     const passwordMatch = await bcrypt.compare(password, user.password);
 
     if (!passwordMatch) {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
 
-    // Generate a JWT token
-    const token = jwt.sign({ userId: user._id }, 'your_secret_key', { expiresIn: '1h' });
-
-    res.json({ token });
+    // Render the "sign-in-authentication.html" page for the next step
+    res.render("sign-in-authentication.html");
   } catch (error) {
-    res.status(500).json({ error: 'An error occurred during sign-in.' });
+    res.status(500).json({ error: 'An error occurred during password validation.' });
   }
 });
 
-module.exports = router;
+// POST /sign-in-authentication route for generating and sending OTP (Step 3)
+router.post('/sign-in-authentication', async (req, res) => {
+  const { phone } = req.body; // User's phone number
 
+  // Generate an OTP
+  const otp = otpGenerator.generate(6, { upperCaseAlphabets: false, specialChars: false });
 
+  // Send the OTP using Twilio
+  const accountSid = 'your_account_sid';
+  const authToken = 'your_auth_token';
+  const client = new twilio(accountSid, authToken);
 
+  client.messages
+    .create({
+      body: `Your OTP is: ${otp}`,
+      to: phone, // User's phone number
+      from: 'your_twilio_number', // From a valid Twilio number
+    })
+    .then((message) => {
+      console.log('OTP sent:', message.sid);
+      res.json({ message: 'OTP sent successfully' });
+    })
+    .catch((error) => {
+      res.status(500).json({ error: 'Error sending OTP' });
+    });
+});
 
-
-
-
-
-
-
-
-
-
-const otpGenerator = require("otp-generator") ;
-const otpGenrate = ()=>{
-    const otp = otpGenerator.generate(6 ,{upperCaseAlphabets:false , specialChars:false});
-
-return otp ;
-}
-
-
-
-const accountSid = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'; // Your Account SID from www.twilio.com/console
-const authToken = 'your_auth_token'; // Your Auth Token from www.twilio.com/console
-
-const twilio = require('twilio');
-const client = new twilio(accountSid, authToken);
-
-client.messages
-  .create({
-    body: 'Hello from Node',
-    to: '+12345678901', // Text this number
-    from: '+12345678901', // From a valid Twilio number
-  })
-  .then((message) => console.log(message.sid));
 module.exports = router;

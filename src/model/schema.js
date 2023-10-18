@@ -13,7 +13,7 @@ const customerInfoSchema = new mongoose.Schema({
     unique: true, // Ensures that phone numbers are unique in the database
   },
   email: {
-    type: String ;
+    type: String ,
     unique:true ,
   },
 
@@ -41,7 +41,11 @@ customerInfoSchema.pre('save', async function (next) {
   });
 
 // Create a model from the schema
-const customers = mongoose.model('customerInfoSchema', customers);
+const customers = mongoose.model('customers', customerInfoSchema);
+
+
+
+
 
 
 

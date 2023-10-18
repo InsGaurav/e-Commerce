@@ -1,8 +1,14 @@
 const express = require('express');
 const hbs = require("hbs");
 const app = express();
-require("./db/conn");
+const conct = require("./db/conn");
 const customers = require("./model/schema");
+conct.connectToDatabase();
+const signInRouter = require('./src/routes/sign-in');
+const signUpRouter = require('./src/routes/sign-up');
+
+
+
 const PORT = process.env.PORT || 3000;
 const path = require("path");
 app.set("view engine", "hbs");
@@ -34,27 +40,13 @@ app.get("/results", (req, res) => {
     res.render("results");
     });
 
-app.get("/sign-in" ,(req ,res)=>{
-    res.render("sign-in");
-} ) ;
 
-app.post("/sign-up" , async (req , res)=>{
-    try {
-        const userData = req.body; // Assuming the form data is sent as JSON
-        
-        //to hash the password before save 
+app.use('/api' , signInRouter);
 
-        // Create a new user instance from the submitted data
-        const newCustomer = new User(userData);
-    
-        // Save the new user to the database
-        await newCustomer.save();
-    
-        res.json({ message: 'User signed up successfully.' });
-      } catch (error) {
-        res.status(500).json({ error: 'An error occurred during sign-up.' });
-      }
-})
+app.use('/api' , signUpRouter);     //for sign up  
+
+
+
 
 
 

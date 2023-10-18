@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/schema');
 const bcrypt = require('bcrypt');
+const customers = require('../model/schema');
 
 // POST /signup route for user sign-up
 router.post('/signup', async (req, res) => {
@@ -24,5 +25,8 @@ router.post('/signup', async (req, res) => {
     res.status(500).json({ error: 'An error occurred during sign-up.' });
   }
 });
+
+
+
 
 module.exports = router;

@@ -13,7 +13,7 @@
     <div class="content-portion">
 
         <div class="logo">
-            <img class="amazon-logo" src="amazonlogo.png" alt="amazon">
+            <img class="amazon-logo" src="/public/Images/amazonlogo.png" alt="amazon">
             <span>.in</span>
         </div>
 
@@ -25,14 +25,16 @@
                 Sign in
             </h1>
 
+            <form action="/sign-in" method="post">
             <label for="sign-in-detail">Email or mobile phone number</label>
 
             <input id="sign-in-detail" type="text">
 
 
-            <button id="sign-in-continue-btn">
+            <button id="sign-in-continue-btn" type="submit">
                 Continue
             </button>
+            </form>
 
             <div class="terms-cond">
                 <span>By continuing, You agree to Amazon's </span>
