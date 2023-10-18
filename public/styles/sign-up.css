@@ -1,0 +1,138 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.icon{
+    text-decoration: none;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+}
+.a-icon{
+    background-image: url(https://m.media-amazon.com/images/S/sash/mPGmT0r6IeTyIee.png);
+    -webkit-background-size: 400px 750px;
+    background-size: 400px 750px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.a-icon-logo{
+    background-position: -5px -130px;
+    height: 31px;
+    width: 103px;
+}
+
+.a-icon-domain-in {
+    width: 14px;
+    background-position: -228px -200px;
+}
+
+.a-icon-domain {
+    height: 28px;
+}
+
+.main-space{
+    display: flex;
+    justify-content: center;
+}
+
+.content{
+    width: 700px;
+}
+
+.sign-up-details{
+    width: 350px;
+    border: 0.8px solid #11111130;
+    margin-right: 175px;
+    margin-left: 175px;
+    border-radius: 8px;
+}
+
+.details{
+    padding: 14px 18px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+h1{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding-bottom: 4px;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.section{
+    margin-top: 15px;
+}
+
+.labels{
+    display: block;
+    padding-left: 2px;
+    padding-bottom: 2px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+.name-input,
+.mobile-input,
+.password-input{
+    width: 100%;
+    margin-right: 0px;
+    height: 31px;
+    padding: 3px 7px;
+    border: 1px solid #a6a6a6;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.submit{
+    margin-top: 14px;
+    width: 100%;
+    height: 33px;
+    background-color: #ffd814;
+    border: none;
+    border-radius: 7px;
+}
+
+.tnc{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 18px;
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 500;
+    display: block;
+    width: 90%;
+}
+
+a{
+    color: #1f61a8;
+    text-decoration: none;
+}
+
+.below-section{
+    padding-top: 20px;
+    width: 100%;
+    padding-left: 18px;
+    margin-bottom: 15px;
+}
+
+.sign-in{
+    display: flex;
+    font-size: 13px;
+    align-items: center;
+    padding-top: 3px;
+}
+
+.arrow{
+    font-size: 8px;
+}
+
+.sign-a:hover{
+    color: yellow;
+}

@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 const path = require("path");
 app.set("view engine", "hbs");
 app.use(express.static(path.join(__dirname, "../public")));
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 
@@ -17,6 +17,7 @@ const partialPath = path.join(__dirname , "../templates/partials");
 
 hbs.registerPartials(partialPath) ;
 app.set("views", templatePath);
+
 app.get("/", (req, res) => {
     res.render("index");
     });
@@ -35,13 +36,20 @@ app.get("/results", (req, res) => {
 
 app.get("/sign-in" ,(req ,res)=>{
     res.render("sign-in");
-} )
+} );
 
+app.get("/sign-up" ,(req ,res)=>{
+    res.render("sign-up");
+} );
 
-
-
-
-    
+app.post("/sign-up", async (req,res)=>{
+    try {
+        console.log(req.body);
+        res.send(req.body.name);
+    } catch (error) {
+        res.status(400).send(error);
+    }
+});
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
