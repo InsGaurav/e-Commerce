@@ -4,8 +4,8 @@ const app = express();
 const conct = require("./db/conn");
 const customers = require("./model/schema");
 conct.connectToDatabase();
-const signInRouter = require('./src/routes/sign-in');
-const signUpRouter = require('./src/routes/sign-up');
+const signInRouter = require('./routes/sign-in');
+const signUpRouter = require('./routes/sign-up');
 
 
 
@@ -21,6 +21,7 @@ app.use(express.json());
 
 const templatePath =  path.join(__dirname , "../templates/Views");
 const partialPath = path.join(__dirname , "../templates/partials");
+publicPath = path.join(__dirname , "../public");
 
 hbs.registerPartials(partialPath) ;
 app.set("views", templatePath);
@@ -38,6 +39,10 @@ app.get("/cart", (req, res) => {
 
 app.get("/results", (req, res) => { 
     res.render("results");
+    });
+
+app.get("/sign-in", (req, res) => {
+    res.sendFile(publicPath + "/sign-in.html");
     });
 
 
