@@ -41,7 +41,6 @@ customerInfoSchema.pre('save', async function (next) {
   });
 
 // Create a model from the schema
-const customers = mongoose.model('customers',customerInfoSchema);
-
+const customers = mongoose.model('customers', customerInfoSchema);
 
 module.exports = customers;

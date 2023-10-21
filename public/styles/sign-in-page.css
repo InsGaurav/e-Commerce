@@ -40,6 +40,7 @@
 
 .login-details input{
     height: 2rem;
+    width: 96%;
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 5px;

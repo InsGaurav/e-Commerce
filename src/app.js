@@ -1,8 +1,14 @@
 const express = require('express');
 const hbs = require("hbs");
 const app = express();
-const conct =require("./db/conn");
+const conct = require("./db/conn");
+const customers = require("./model/schema");
 conct.connectToDatabase();
+const signInRouter = require('./src/routes/sign-in');
+const signUpRouter = require('./src/routes/sign-up');
+
+
+
 const PORT = process.env.PORT || 3000;
 const path = require("path");
 app.set("view engine", "hbs");
@@ -49,6 +55,8 @@ app.get("/sign-up" ,(req ,res)=>{
 app.get("/sign-up-auth" ,(req ,res)=>{
     res.sendFile(publicPath+"sign-up-authentication.html");
 } ) ;
+
+app.use('/api' , signInRouter);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
