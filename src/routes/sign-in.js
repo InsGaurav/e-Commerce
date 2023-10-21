@@ -1,14 +1,18 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../models/schema');
+const User = require('../model/schema');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const otpGenerator = require("otp-generator");
 const twilio = require('twilio');
+const path = require("path");
+
+
 
 // POST /signin route for user sign-in (Step 1)
-router.post('/signin', async (req, res) => {
-  
+router.post('/sign-in', async (req, res) => {
+  console.log(User.findOne({email: 'john1234@gmail.com'})) ;
+ 
   const { emailOrPhone } = req.body;
 
   try {
@@ -20,9 +24,12 @@ router.post('/signin', async (req, res) => {
     if (!user) {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
+    else{
+       // Render the "sign-in-password.html" page for the next step
+    res.sendFile(path.join(__dirname , "../../public/sign-in-password.html"))
+    }
 
-    // Render the "sign-in-password.html" page for the next step
-    res.render("sign-in-password.html");
+   
   } catch (error) {
     res.status(500).json({ error: 'An error occurred during sign-in.' });
   }
@@ -79,5 +86,6 @@ router.post('/sign-in-authentication', async (req, res) => {
       res.status(500).json({ error: 'Error sending OTP' });
     });
 });
+
 
 module.exports = router;

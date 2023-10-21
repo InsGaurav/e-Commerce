@@ -1,4 +1,5 @@
 const express = require('express');
+
 const app = express();
 const router = new express.Router();
 const User = require('../model/schema');
@@ -9,6 +10,7 @@ const publicPath = path.join(__dirname , "../../public/");
 app.use(express.static('public'));
 const otpGenerator = require("otp-generator");
 const twilio = require('twilio');
+
 // POST /signup route for user sign-up
 router.post('/sign-up', async (req, res) => {
   const { username, phoneNumber , email , password} = req.body;
