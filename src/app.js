@@ -13,18 +13,23 @@ const PORT = process.env.PORT || 3000;
 const path = require("path");
 app.set("view engine", "hbs");
 app.use(express.static(path.join(__dirname, "../public")));
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
-
-
 
 const templatePath =  path.join(__dirname , "../templates/Views");
 const partialPath = path.join(__dirname , "../templates/partials");
-publicPath = path.join(__dirname , "../public");
 
+const publicPath = path.join(__dirname , "../public/");
+
+
+app.use(express.static('public'));
 hbs.registerPartials(partialPath) ;
 app.set("views", templatePath);
+
+const signUpRouter = require('./routes/sign-up');
+const { Console } = require('console');
+app.use(signUpRouter);
+
 app.get("/", (req, res) => {
     res.render("index");
     });
@@ -41,23 +46,20 @@ app.get("/results", (req, res) => {
     res.render("results");
     });
 
-app.get("/sign-in", (req, res) => {
-    res.sendFile(publicPath + "/sign-in.html");
-    });
 
+app.get("/sign-in" ,(req ,res)=>{
+    res.sendFile(publicPath + 'sign-in.html');
+} ) ;   
+
+app.get("/sign-up" ,(req ,res)=>{
+    res.sendFile(publicPath+"sign-up.html");
+} ) ;
+
+app.get("/sign-up-auth" ,(req ,res)=>{
+    res.sendFile(publicPath+"sign-up-authentication.html");
+} ) ;
 
 app.use('/api' , signInRouter);
-
-app.use('/api' , signUpRouter);     //for sign up  
-
-
-
-
-
-
-
-
-    
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
