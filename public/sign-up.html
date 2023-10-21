@@ -23,19 +23,19 @@
                         <form action="/sign-up" method="post">
                         <div class="section">
                              <label class="labels">Your name</label>
-                            <input type="text" placeholder="First and last name" class="name-input" tabindex="1" required name="name">
+                            <input type="text" placeholder="First and last name" class="name-input" tabindex="1" required name="username">
                         </div>
                         <div class="section">
                             <label class="labels">Mobile number</label>
-                            <input type="text" id="mobileNumber" class="mobile-input" placeholder="" required name="mobile">
+                            <input type="text" id="mobileNumber" class="mobile-input" placeholder="" required name="phoneNumber">
                         </div>
                         <div class="section">
                             <label class="labels">Password</label>
-                            <input type="password" placeholder="At least 6 characters" class="password-input" tabindex="1" required name="password">
+                            <input type="password" placeholder="At least 6 characters" class="password-input" tabindex="1" required name="email">
                         </div>
                         <div class="section">
                             <label class="labels">Re-enter password</label>
-                            <input type="password" placeholder="" class="password-input cpassword" tabindex="1" required name="confirmpassword">
+                            <input type="password" placeholder="" class="password-input cpassword" tabindex="1" required name="password">
                         </div>
                         <input type="submit" value="Continue" class="submit" disabled>
                         </form>
@@ -43,13 +43,13 @@
                         <a href="">Conditions of Use</a> and <a href="">Privacy Notice</a>.</div>
                     </div>
                     <div class="below-section">
-                            <span class="sign-in">Already have an account? <a href="./sign-in.html" class="sign-a"> Sign in <i class="fa-solid fa-caret-right arrow"></i></a></span>
+                            <span class="sign-in">Already have an account? <a href="/sign-in" class="sign-a"> Sign in <i class="fa-solid fa-caret-right arrow"></i></a></span>
                             <span class="sign-in">Buying for work? <a href="/" class="sign-a"> Create a free buisness account <i class="fa-solid fa-caret-right arrow"></i></a></span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="./scripts/sign-up.js"></script>
+    <script src="./scripts/sign-up-script.js"></script>
 </body>
 </html>
