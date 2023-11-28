@@ -13,7 +13,7 @@
     <div class="content-portion">
 
         <div class="logo">
-            <img class="amazon-logo" src="/public/Images/amazonlogo.png" alt="amazon">
+            <img class="amazon-logo" src="../public/Images/amazon_logo.png" alt="amazon">
             <span>.in</span>
         </div>
 
@@ -32,15 +32,11 @@
             <div class="otp-info">
                 We’ve sent a One Time Password (OTP) to the mobile number above. Please enter it to complete verification
             </div>
-
-            
-                <label for="OTP">Enter OTP</label>
-           
-             <input id="OTP" type="text">
-
-                <button id="authenticate-continue">
-                 Continue
-                </button>
+                <form id="otpForm">
+                    <label for="OTP">Enter OTP</label>
+                    <input id="OTP" type="text" name="otp">
+                    <input type="submit" value="Continue" class="submit" id="authenticate-continue">
+                </form>
 
 
             <div class="resent">
@@ -48,22 +44,6 @@
             </div>
 
         </div>
-
-
-        <div class="choice">
-            or
-        </div>
-
-        <div class="line-break">
-            <hr>
-        </div>
-
-        <div>
-            <button id="sign-in-with-pass">
-                Sign in with your password
-                </button>
-        </div>
-       
     </div>
 
 

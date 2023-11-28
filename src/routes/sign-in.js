@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../models/schema');
+const User = require('../model/schema');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const otpGenerator = require("otp-generator");

@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles/sign-up.css">
+    <link rel="stylesheet" href="styles/sign-in-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="work-space">
@@ -20,7 +23,7 @@
                 <div class="sign-up-details">
                     <div class="details">
                         <h1>Create Account</h1>
-                        <form action="/sign-up" method="post">
+                        <form id="signupForm">
                         <div class="section">
                              <label class="labels">Your name</label>
                             <input type="text" placeholder="First and last name" class="name-input" tabindex="1" required name="username">
@@ -51,5 +54,66 @@
         </div>
     </div>
     <script src="./scripts/sign-up-script.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Function to load OTP form and set up event handling after loading
+            function loadOtpForm() {
+                // Load OTP form dynamically
+                $('.content').load('/authentication.html .login-details', function() {
+                    // After loading the form, set up event handling for its submission
+                    $('#otpForm').submit(function(event) {
+                        event.preventDefault(); // Prevent default form submission
+                        
+                        let formData = $(this).serialize();
+        
+                        $.ajax({
+                            type: 'POST',
+                            url: '/sign-up-auth', // Backend endpoint for OTP form submission
+                            data: formData,
+                            success: function(response) {
+                                console.log('Form data submitted successfully!', response);
+                                // Handle success response from server
+                                if(response==='correct'){
+                                    window.location.href = '/sign-in';
+                                };
+                                // Redirect or perform further actions if needed
+                            },
+                            error: function(error) {
+                                console.error('Error submitting form data:', error);
+                                // Handle error response from server
+                            }
+                        });
+                    });
+                });
+            }
+        
+            // Handling submission for the initial sign-up form
+            $('#signupForm').submit(function(event) {
+                event.preventDefault(); // Prevent default form submission
+        
+                let formData = $(this).serialize();
+        
+                $.ajax({
+                    type: 'POST',
+                    url: '/sign-up', // Backend endpoint for initial sign-up form submission
+                    data: formData,
+                    success: function(response) {
+                        console.log('Form data submitted successfully!', response);
+                        // Handle success response from server
+                        if (response === 'success') {
+                            // If signup was successful, load OTP form
+                            loadOtpForm();
+                        }else{
+                            alert(response);
+                        }
+                    },
+                    error: function(error) {
+                        console.error('Error submitting form data:', error);
+                        // Handle error response from server
+                    }
+                });
+            });
+        });        
+    </script>
 </body>
 </html>

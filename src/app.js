@@ -4,8 +4,8 @@ const app = express();
 const conct = require("./db/conn");
 const customers = require("./model/schema");
 conct.connectToDatabase();
-const signInRouter = require('./src/routes/sign-in');
-const signUpRouter = require('./src/routes/sign-up');
+const signInRouter = require('./routes/sign-in');
+const signUpRouter = require('./routes/sign-up');
 
 
 
@@ -24,7 +24,6 @@ app.use(express.static('public'));
 hbs.registerPartials(partialPath) ;
 app.set("views", templatePath);
 
-const signUpRouter = require('./routes/sign-up');
 const { Console } = require('console');
 app.use(signUpRouter);
 
@@ -53,7 +52,7 @@ app.get("/sign-up" ,(req ,res)=>{
 } ) ;
 
 app.get("/sign-up-auth" ,(req ,res)=>{
-    res.sendFile(publicPath+"sign-up-authentication.html");
+    res.sendFile(publicPath+"authentication.html");
 } ) ;
 
 app.use('/api' , signInRouter);
