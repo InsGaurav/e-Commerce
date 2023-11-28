@@ -18,7 +18,9 @@ app.use(express.json());
 
 const templatePath =  path.join(__dirname , "../templates/Views");
 const partialPath = path.join(__dirname , "../templates/partials");
+
 const publicPath = path.join(__dirname , "../public/");
+
 
 app.use(express.static('public'));
 hbs.registerPartials(partialPath) ;
@@ -42,6 +44,7 @@ app.get("/cart", (req, res) => {
 app.get("/results", (req, res) => { 
     res.render("results");
     });
+
 
 app.get("/sign-in" ,(req ,res)=>{
     res.sendFile(publicPath + 'sign-in.html');
