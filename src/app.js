@@ -26,7 +26,6 @@ app.use(express.static('public'));
 hbs.registerPartials(partialPath) ;
 app.set("views", templatePath);
 
-const signUpRouter = require('./routes/sign-up');
 const { Console } = require('console');
 app.use(signUpRouter);
 
@@ -56,7 +55,7 @@ app.get("/sign-up" ,(req ,res)=>{
 } ) ;
 
 app.get("/sign-up-auth" ,(req ,res)=>{
-    res.sendFile(publicPath+"sign-up-authentication.html");
+    res.sendFile(publicPath+"authentication.html");
 } ) ;
 
 app.use('/api' , signInRouter);
